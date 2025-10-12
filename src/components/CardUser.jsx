@@ -1,8 +1,13 @@
-import "../pages/index.css";
+import "../styles/index.css";
+import { useNavigate } from "react-router-dom";
 
 
 const CardUser = ({ id, nome, email, imagem }) => {
+  const navigate = useNavigate();
 
+  const Navegar = (tipo) => {
+    navigate("/" + tipo + "/"+ id)
+  }
   return (
     <li className="card-user">
       <div className="data-user">
@@ -15,10 +20,10 @@ const CardUser = ({ id, nome, email, imagem }) => {
         </p>
       </div>
       <div className="buttons">
-        <button type="button" className="button edit">
+        <button type="button" className="button edit" onClick={() => Navegar("editar")}>
           Editar
         </button>
-        <button type="button" className="button delete">
+        <button type="button" className="button delete" onClick={() => Navegar("excluir")}>
           Excluir
         </button>
       </div>

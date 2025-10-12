@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
-import CardUser from "./CardUser";
-import api from "../services/api";
+import { useNavigate } from "react-router-dom";
+import CardUser from "../../components/CardUser";
+import api from "../../services/api";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
+  const navigate = useNavigate();
 
   async function getUsers() {
     const usersFromApi = await api.get("/users");
@@ -13,11 +15,15 @@ const Users = () => {
   useEffect(() => {
     getUsers();
   }, [users]);
+
+  const NewUser = () => {
+    navigate("/cadastrar")
+  }
   return (
     <main className="content">
       <header className="cabecalho">
         <h1 className="title">Usuários</h1>
-        <button type="button" className="add-user">
+        <button type="button" className="add-user" onClick={NewUser}>
           + Novo Usuário
         </button>
       </header>
@@ -25,6 +31,7 @@ const Users = () => {
         {users.map((user) => (
           <CardUser
             key={user.id}
+            id={user.id}
             nome={`${user.first_name} ${user.last_name}`}
             email={user.email}
             imagem={user.avatar}
