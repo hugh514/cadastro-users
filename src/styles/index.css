@@ -13,14 +13,15 @@ body {
   height: 100vh;
   background-color: #e9e8e8;
 }
-
+h1 {
+  color: #333;
+}
 .cabecalho {
   display: flex;
   flex-direction: row;
   gap: 6vw;
   font-size: 1.1rem;
   justify-content: space-between;
-  color: #333;
 }
 
 .content {
@@ -28,10 +29,10 @@ body {
   border-radius: 10px;
   padding: 40px;
   width: 80vw;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.add-user {
+.create {
   align-self: center;
   padding: 8px 15px;
   border: none;
@@ -52,7 +53,7 @@ body {
   background-color: #f7f7f7;
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 img {
@@ -99,4 +100,10 @@ img {
   padding: 30px;
   border-radius: 10px;
   gap: 15px;
+}
+
+input{
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
 }

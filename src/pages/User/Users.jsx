@@ -23,7 +23,7 @@ const Users = () => {
     <main className="content">
       <header className="cabecalho">
         <h1 className="title">Usuários</h1>
-        <button type="button" className="add-user" onClick={NewUser}>
+        <button type="button" className="button create" onClick={NewUser}>
           + Novo Usuário
         </button>
       </header>

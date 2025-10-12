@@ -5,9 +5,9 @@ const NewUser = () => {
   const [inputSobreNome, setSobreNome] = useState();
   const [inputEmail, setEmail] = useState();
   return (
-    <div>
+    <div className="content">
       <h1>Criar Novo Usuário</h1>
-      <form action="">
+      <form action="" className="list-user">
         <input
           type="text"
           placeholder="Nome"
@@ -26,7 +26,7 @@ const NewUser = () => {
           value={inputEmail}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <button type="button">Cadastrar Novo Usuário</button>
+        <button type="button" className="button create">Cadastrar</button>
       </form>
     </div>
   );
