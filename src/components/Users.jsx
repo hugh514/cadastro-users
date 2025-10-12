@@ -12,7 +12,7 @@ const Users = () => {
 
   useEffect(() => {
     getUsers();
-  }, []);
+  }, [users]);
   return (
     <main className="content">
       <header className="cabecalho">
