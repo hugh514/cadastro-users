@@ -43,6 +43,7 @@ const NewUser = ({ editar = false, id }) => {
     setNome();
     setEmail();
     setSobreNome();
+    editar = false;
     navigate(-1);
   }
 

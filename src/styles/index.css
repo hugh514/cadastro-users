@@ -114,3 +114,8 @@ input{
   padding-left: 20px;
   padding-right: 20px;
 }
+
+.delete-buttons{
+  justify-content: center;
+  padding: 15px;
+}
