@@ -1,9 +1,10 @@
 import {useParams} from 'react-router-dom'
+import NewUser from './NewUser';
 
 const UserEdit = () => {
   const {id} = useParams();
   return (
-    <div>UserEdit {id}</div>
+    <NewUser editar={true} id={id}/>
   )
 }
 
