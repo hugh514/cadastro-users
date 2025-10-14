@@ -24,7 +24,7 @@ const Users = () => {
       <header className="cabecalho">
         <h1 className="title">Usuários</h1>
         <button type="button" className="button create" onClick={NewUser}>
-          + Novo Usuário
+          + Criar Novo Usuário
         </button>
       </header>
       <section className="list-user">
